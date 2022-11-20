@@ -1,0 +1,328 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <link rel="icon" type="image/png" sizes="96x96" href="./assets/favicon-96x96.png">
+  <!-- ICON NEEDS FONT AWESOME FOR CHEVRON UP ICON -->
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.2.0/css/all.min.css" integrity="sha512-xh6O/CkQoPOWDdYTDqeRdPCVd1SpvCA9XXcUnZS2FmJNp1coAFzvtCN9BmamE+4aHK8yyUHUSCcJHgXloTyT2A==" crossorigin="anonymous" referrerpolicy="no-referrer" />
+  <!-- Font family -->
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;700&display=swap" rel="stylesheet">
+  <!-- Style -->
+  <link rel="stylesheet" href="./dist/style.css">
+  <title>Proiecte</title>
+</head>
+<body>
+
+  <!-- Return to Top -->
+  <button id="return-to-top"><i class="fa-sharp fa-solid fa-angle-up"></i></button>
+
+  <!-- Navigation bar -->
+  <nav id="acasa" class="nav-bar container">
+    <div class="nav-bar__logo-background"></div>
+      <a class="nav-bar__logo" href="./index.html#acasa">
+        <img src="./assets/logo_llkop.jpg" alt="excavator" height="35px" width="35px">
+        <h2>Llkop</h2>
+      </a>
+    
+    <!-- Hamburger button =>  >= 576px -->
+    <button class="nav-bar__hamburger-button">
+      <span></span>
+      <span></span>
+      <span></span>
+    </button>
+    <!-- Mobile view layout -->
+    <div class="overlay"></div>
+
+    <!-- Navigation lists =>  < 576px-->
+    <ul class="nav-bar__lists">
+      <li>
+        <a href="./index.html#acasa">Acasa</a>
+      </li>
+      <li>
+        <a href="./index.html#servicii">Servicii</a>
+      </li>
+      <li>
+        <a href="./index.html#despre-noi">Despre noi</a>
+      </li>
+      <li>
+        <a href="./index.html#proiecte">Proiecte</a>
+      </li>
+      <li>
+        <a href="./index.html#contacte">Contacte</a>
+      </li>
+    </ul>
+  </nav>
+  <!-- Navigation bar end -->
+
+  <!-- Gallery  -->
+  <div class="container">
+  <h1>Proiecte</h1>
+    <div class="myButton">
+      <button
+      onclick="filterSelection('all')" class="myButton__button active">Toate</button>
+      <button
+      onclick="filterSelection('img')" class="myButton__button ">Imagini</button>
+      <button
+      onclick="filterSelection('vid')" class="myButton__button ">Video</button>
+    </div>
+    <hr />
+    <div class="gallery">
+
+      <div class="gallery__item img">
+        <img src="./assets/gallery/img-1.jpg" alt="img-1" class="gallery-img">
+      </div>
+      <div class="gallery__item img">
+        <img src="./assets/gallery/img-2.jpg" alt="img-2" class="gallery-img">
+      </div>
+      <!-- Video -->
+      <div class="gallery__item vid">
+        <video height="100%" width="100%" controls autoplay muted>
+          <source  src="./assets/gallery_videos/vid-2.mp4" type="video/mp4">
+        </video>
+      </div>
+      <div class="gallery__item img">
+        <img src="./assets/gallery/img-3.jpg" alt="img-3" class="gallery-img">
+      </div>
+      <div class="gallery__item img">
+        <img src="./assets/gallery/img-4.jpg" alt="img-4" class="gallery-img">
+      </div>
+      <div class="gallery__item img">
+        <img src="./assets/gallery/img-5.jpg" alt="img-5" class="gallery-img">
+      </div>
+      <div class="gallery__item img">
+        <img src="./assets/gallery/img-6.jpg" alt="img-6" class="gallery-img">
+      </div>
+      <div class="gallery__item img">
+        <img src="./assets/gallery/img-7.jpg" alt="img-7" class="gallery-img">
+      </div>
+      <div class="gallery__item img">
+        <img src="./assets/gallery/img-8.jpg" alt="img-8" class="gallery-img">
+      </div>
+      <div class="gallery__item img">
+        <img src="./assets/gallery/img-9.jpg" alt="img-9" class="gallery-img">
+      </div>
+      <div class="gallery__item img">
+        <img src="./assets/gallery/img-10.jpg" alt="img-10" class="gallery-img">
+      </div>
+      <div class="gallery__item gallery__item--hor img">
+        <img src="./assets/gallery/img-11.jpg" alt="img-11" class="gallery-img">
+      </div>
+      <!-- Video -->
+      <div class="gallery__item vid">
+        <video height="100%" width="100%" controls autoplay muted>
+          <source  src="./assets/gallery_videos/vid-1.mp4" type="video/mp4">
+        </video>
+      </div>
+      <div class="gallery__item img">
+        <img src="./assets/gallery/img-12.jpg" alt="img-12" class="gallery-img">
+      </div>
+      <div class="gallery__item">
+        <img src="./assets/gallery/img-13.jpg" alt="img-13" class="gallery-img">
+      </div>
+      <div class="gallery__item img">
+        <img src="./assets/gallery/img-14.jpg" alt="img-14" class="gallery-img">
+      </div>
+      <div class="gallery__item img">
+        <img src="./assets/gallery/img-15.jpg" alt="img-15" class="gallery-img">
+      </div>
+      <div class="gallery__item img">
+        <img src="./assets/gallery/img-16.jpg" alt="img-16" class="gallery-img">
+      </div>
+      <div class="gallery__item img">
+        <img src="./assets/gallery/img-17.jpg" alt="img-17" class="gallery-img">
+      </div>
+      <div class="gallery__item img">
+        <img src="./assets/gallery/img-18.jpg" alt="img-18" class="gallery-img">
+      </div>
+      <div class="gallery__item img">
+        <img src="./assets/gallery/img-19.jpg" alt="img-19" class="gallery-img">
+      </div>
+      <div class="gallery__item img">
+        <img src="./assets/gallery/img-20.jpg" alt="img-20" class="gallery-img">
+      </div>
+      <div class="gallery__item img">
+        <img src="./assets/gallery/img-21.jpg" alt="img-21" class="gallery-img">
+      </div>
+      <div class="gallery__item img">
+        <img src="./assets/gallery/img-22.jpg" alt="img-22" class="gallery-img">
+      </div>
+      <div class="gallery__item img">
+        <img src="./assets/gallery/img-23.jpg" alt="img-23" class="gallery-img">
+      </div>
+      <div class="gallery__item img">
+        <img src="./assets/gallery/img-24.jpg" alt="img-24" class="gallery-img">
+      </div>
+      <div class="gallery__item gallery__item--lg img">
+        <img src="./assets/gallery/img-25.jpg" alt="img-25" class="gallery-img">
+      </div>
+      <div class="gallery__item img">
+        <img src="./assets/gallery/img-26.jpg" alt="img-26" class="gallery-img">
+      </div>
+      <div class="gallery__item img">
+        <img src="./assets/gallery/img-27.jpg" alt="img-27" class="gallery-img">
+      </div>
+      <div class="gallery__item img">
+        <img src="./assets/gallery/img-28.jpg" alt="img-28" class="gallery-img">
+      </div>
+      <div class="gallery__item img">
+        <img src="./assets/gallery/img-29.jpg" alt="img-29" class="gallery-img">
+      </div>
+      <div class="gallery__item img">
+        <img src="./assets/gallery/img-30.jpg" alt="img-30" class="gallery-img">
+      </div>
+      <div class="gallery__item img">
+        <img src="./assets/gallery/img-31.jpg" alt="img-31" class="gallery-img">
+      </div>
+      <div class="gallery__item img">
+        <img src="./assets/gallery/img-32.jpg" alt="img-32" class="gallery-img">
+      </div>
+      <div class="gallery__item img">
+        <img src="./assets/gallery/img-33.jpg" alt="img-33" class="gallery-img">
+      </div>
+      <div class="gallery__item img">
+        <img src="./assets/gallery/img-34.jpg" alt="img-34" class="gallery-img">
+      </div>
+      <div class="gallery__item img">
+        <img src="./assets/gallery/img-35.jpg" alt="img-35" class="gallery-img">
+      </div>
+      <div class="gallery__item img">
+        <img src="./assets/gallery/img-36.jpg" alt="img-36" class="gallery-img">
+      </div>
+      <div class="gallery__item img">
+        <img src="./assets/gallery/img-37.jpg" alt="img-37" class="gallery-img">
+      </div>
+      <div class="gallery__item img">
+        <img src="./assets/gallery/img-38.jpg" alt="img-38" class="gallery-img">
+      </div>
+      <div class="gallery__item img">
+        <img src="./assets/gallery/img-39.jpg" alt="img-39" class="gallery-img">
+      </div>
+      <div class="gallery__item img">
+        <img src="./assets/gallery/img-40.jpg" alt="img-40" class="gallery-img">
+      </div>
+      <div class="gallery__item img">
+        <img src="./assets/gallery/img-41.jpg" alt="img-41" class="gallery-img">
+      </div>
+      <div class="gallery__item img">
+        <img src="./assets/gallery/img-42.jpg" alt="img-42" class="gallery-img">
+      </div>
+      <div class="gallery__item img">
+        <img src="./assets/gallery/img-43.jpg" alt="img-43" class="gallery-img">
+      </div>
+      <div class="gallery__item img">
+        <img src="./assets/gallery/img-44.jpg" alt="img-44" class="gallery-img">
+      </div>
+      <div class="gallery__item img">
+        <img src="./assets/gallery/img-45.jpg" alt="img-45" class="gallery-img">
+      </div>
+      <div class="gallery__item img">
+        <img src="./assets/gallery/img-46.jpg" alt="img-46" class="gallery-img">
+      </div>
+      <div class="gallery__item img">
+        <img src="./assets/gallery/img-47.jpg" alt="img-47" class="gallery-img">
+      </div>
+      <div class="gallery__item img">
+        <img src="./assets/gallery/img-48.jpg" alt="img-48" class="gallery-img">
+      </div>
+      <div class="gallery__item img">
+        <img src="./assets/gallery/img-49.jpg" alt="img-49" class="gallery-img">
+      </div>
+      <div class="gallery__item img">
+        <img src="./assets/gallery/img-50.jpg" alt="img-50" class="gallery-img">
+      </div>     
+      <div class="gallery__item img">
+        <img src="./assets/gallery/img-51.jpg" alt="img-50" class="gallery-img">
+      </div>     
+      <div class="gallery__item img">
+        <img src="./assets/gallery/img-52.jpg" alt="img-50" class="gallery-img">
+      </div>     
+      <div class="gallery__item img">
+        <img src="./assets/gallery/img-53.jpg" alt="img-50" class="gallery-img">
+      </div>     
+      <div class="gallery__item img">
+        <img src="./assets/gallery/img-54.jpg" alt="img-50" class="gallery-img">
+      </div>     
+      <div class="gallery__item img">
+        <img src="./assets/gallery/img-55.jpg" alt="img-50" class="gallery-img">
+      </div>     
+      <div class="gallery__item img">
+        <img src="./assets/gallery/img-56.jpg" alt="img-50" class="gallery-img">
+      </div>     
+      <div class="gallery__item img">
+        <img src="./assets/gallery/img-57.jpg" alt="img-50" class="gallery-img">
+      </div>     
+      <div class="gallery__item img">
+        <img src="./assets/gallery/img-58.jpg" alt="img-50" class="gallery-img">
+      </div>     
+      <div class="gallery__item img">
+        <img src="./assets/gallery/img-59.jpg" alt="img-50" class="gallery-img">
+      </div>     
+      <div class="gallery__item img">
+        <img src="./assets/gallery/img-60.jpg" alt="img-50" class="gallery-img">
+      </div>     
+      <div class="gallery__item img">
+        <img src="./assets/gallery/img-61.jpg" alt="img-50" class="gallery-img">
+      </div>     
+      <div class="gallery__item img">
+        <img src="./assets/gallery/img-62.jpg" alt="img-50" class="gallery-img">
+      </div>     
+      <div class="gallery__item img">
+        <img src="./assets/gallery/img-63.jpg" alt="img-50" class="gallery-img">
+      </div>     
+      <div class="gallery__item img">
+        <img src="./assets/gallery/img-64.jpg" alt="img-50" class="gallery-img">
+      </div>     
+      <!-- <div class="gallery__item img">
+        <img src="./assets/gallery/img-65.jpg" alt="img-50" class="gallery-img">
+      </div>      -->
+      <div class="gallery__item img">
+        <img src="./assets/gallery/img-66.jpg" alt="img-50" class="gallery-img">
+      </div>     
+      <div class="gallery__item img">
+        <img src="./assets/gallery/img-67.jpg" alt="img-50" class="gallery-img">
+      </div>     
+      <div class="gallery__item img">
+        <img src="./assets/gallery/img-68.jpg" alt="img-50" class="gallery-img">
+      </div>     
+      <div class="gallery__item img">
+        <img src="./assets/gallery/img-69.jpg" alt="img-50" class="gallery-img">
+      </div>     
+      <div class="gallery__item img">
+        <img src="./assets/gallery/img-70.jpg" alt="img-50" class="gallery-img">
+      </div>     
+      <div class="gallery__item img">
+        <img src="./assets/gallery/img-71.jpg" alt="img-50" class="gallery-img">
+      </div>     
+      <div class="gallery__item img">
+        <img src="./assets/gallery/img-72.jpg" alt="img-50" class="gallery-img">
+      </div>     
+      <div class="gallery__item img">
+        <img src="./assets/gallery/img-73.jpg" alt="img-50" class="gallery-img">
+      </div>     
+      <div class="gallery__item img">
+        <img src="./assets/gallery/img-74.jpg" alt="img-50" class="gallery-img">
+      </div>     
+      <div class="gallery__item img">
+        <img src="./assets/gallery/img-75.jpg" alt="img-50" class="gallery-img">
+      </div>     
+      <div class="gallery__item img">
+        <img src="./assets/gallery/img-76.jpg" alt="img-50" class="gallery-img">
+      </div>     
+      <div class="gallery__item img">
+        <img src="./assets/gallery/img-77.jpg" alt="img-50" class="gallery-img">
+      </div>     
+      <div class="gallery__item img">
+        <img src="./assets/gallery/img-78.jpg" alt="img-50" class="gallery-img">
+      </div>     
+    </div>
+
+    <div class="fullpage" onclick="this.style.display ='none'"></div>
+  </div>
+
+  <script src="./app/js/projects.js"></script>
+</body>
+</html>

@@ -1,0 +1,172 @@
+@use '../abstracts' as *;
+
+.contact {
+  background-color: $darkblue;
+  padding-top: rem(25);
+  padding-bottom: rem(25);
+  
+  h1 {
+    color: $yellow;
+  }
+
+  &__box {
+    // Landscape Tab view 
+    @include breakpoint-up(lg) {
+      display: grid;
+      grid-template-columns: repeat(2,1fr);
+      grid-template-rows: auto;
+      column-gap: rem(20);
+      row-gap: rem(20);
+    }
+    
+    // Small desktop view 
+    @include breakpoint-up(xl) {
+      column-gap: rem(80);
+    }
+
+    .g-map {
+      width: 100%;
+      height: rem(200);
+      border: 0;
+      box-shadow: 6px 6px 10px rgba(0, 0, 0, 0.5);
+      margin-bottom: rem(35);
+  
+      // Small phone view
+      @include breakpoint-down(xs) {
+        height: rem(150);
+      }
+  
+      //Landscape Tab view
+      @include breakpoint-up(lg) {
+        height: 100%;
+        grid-column-start: 1;
+        grid-column-end: 2;
+        grid-row-start: 1;
+        grid-row-end: 2;
+      }
+      
+      //Desktop view
+      @include breakpoint-up(xl) {
+        height: rem(320);
+      }
+    }
+
+    .contact-details {
+      display: flex;
+      justify-content: space-between;
+      margin-bottom: rem(15);
+      padding: 0 rem(16);
+
+      //Small phone view
+      @include breakpoint-down(xs) {
+        flex-direction: column-reverse;
+        padding: 0;
+      }
+
+      //Landscape Tab view
+      @include breakpoint-up(lg) {
+        align-items: center;
+      }
+      
+      
+
+      .social {
+        display: grid;
+        grid-template-columns: repeat(auto, rem(30));
+        grid-template-rows: repeat(3, rem(30));
+        row-gap: rem(7);
+        
+        //Small phone view
+        @include breakpoint-down(xs) {
+          grid-template-columns: repeat(3, rem(50));
+        }
+        
+        .facebook {
+          grid-column: 1/2;
+          grid-row: 1/1;
+        }
+
+        .tik-tok {
+          grid-column: 2/2;
+          grid-row: 1/1;
+        }
+
+        .instagram {
+          grid-column: 3/3;
+          grid-row: 1/1;
+        }
+
+        .tel-nr {
+          grid-column: 1/4;
+          grid-row: 2/3;  
+        }
+
+        .email {
+          grid-column: 1/4;
+          grid-row: 3/4;
+          text-transform: lowercase;
+        }
+        
+        a {
+          color: #fff;
+          transition: all 0.2s ease-in-out;
+
+          &:hover {
+            color: $yellow;
+          }
+
+          //Small phone view
+          @include breakpoint-down(xs) {
+            font-size: rem(13);
+          }
+
+          //Landscape Tab view
+          @include breakpoint-up(lg) {
+            font-size: rem(18);
+          }
+        }
+      }
+
+      .address {
+        h2 {
+          color: #fff;
+          font-size: rem(20);
+          letter-spacing: rem(1);
+          margin-bottom: rem(10);
+
+          //Small phone view
+          @include breakpoint-down(xs) {
+            font-size: rem(18);
+            margin-bottom: rem(5);
+           }
+
+           //Landscape Tab view
+          @include breakpoint-up(lg) {
+            font-size: rem(25);
+          }
+        }
+
+        p {
+          color: $yellow; 
+          font-size: rem(15);
+          letter-spacing: rem(1);
+
+          //Small phone view
+          @include breakpoint-down(xs) {
+           font-size: rem(12);
+          }
+
+          //Landscape Tab view
+          @include breakpoint-up(lg) {
+            font-size: rem(17);
+          }
+        }
+
+        //Small phone view
+        @include breakpoint-down(xs) {
+          margin-bottom: rem(25);
+        }
+      }
+    }
+  }
+}

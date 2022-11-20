@@ -1,0 +1,44 @@
+@use '../abstracts' as *;
+
+.btn {
+  display: inline-block;
+  border-radius: rem(4);
+  background-color: transparent;
+  padding: rem(15) rem(16);
+  text-transform: uppercase;
+  font-size: rem(13);
+  font-weight: 700;
+  cursor: pointer;
+  transition: all 0.3s ease-in-out;
+
+  // Small phone view
+  @include breakpoint-down(xs) {
+    font-size: rem(11);
+    padding: rem(12) rem(13);
+  }
+  
+  // Desktop view
+  @include breakpoint-up(lg) {
+    font-size: rem(15);
+    padding: rem(18) rem(19) ;
+  }
+
+  span {
+    position: relative;
+    transition: all 0.3s ease-in-out;
+
+    &::after {
+      content: '\00bb';
+      position: absolute;
+      opacity: 0;
+      bottom: rem(-4);
+      right: rem(-42);
+      font-size: rem(25);
+
+      // Small phone view
+      @include breakpoint-down(xs) {
+        font-size: rem(19);
+      }
+    }
+  }
+}

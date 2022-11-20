@@ -1,0 +1,73 @@
+@use '../abstracts' as *;
+
+h1 {
+  text-transform: uppercase;
+  font-weight: 700;
+  font-family: $montserrat;
+  letter-spacing: rem(2);
+  font-size: rem(30); 
+  margin-bottom: rem(40);
+  color: $darkblue;
+  position: relative;
+       
+  //Phone view 
+  @include breakpoint-up(sm) {
+    font-size: rem(35);
+  }
+     
+   //Tab view
+   @include breakpoint-up(md) {
+    font-size: rem(40);
+  }
+      
+  //Landscape Tab view
+  @include breakpoint-up(lg) {
+    text-align: center;
+  }
+      
+  // Large desktop view
+  @include breakpoint-up(xl) {
+    font-size: rem(50);
+    margin-bottom: rem(50);
+  }
+   
+  &::after {
+    content: '';
+    position: absolute;
+    height: rem(5);
+    width: rem(100);
+    background-color: $yellow;
+    bottom: rem(-12);
+    left: 0;
+
+    //Landscape Tab view
+    @include breakpoint-up(lg) {
+      left: 50%;
+      transform: translateX(-50%);
+    }
+  }    
+}
+
+h3 {
+  text-transform: capitalize;
+  font-weight: 700;
+  font-family: $montserrat;
+  letter-spacing: rem(1.2);
+}
+
+p {
+  letter-spacing: rem(1.1);
+  word-spacing: rem(1.5);
+  line-height: rem(25);
+}
+
+a,
+a:active,
+a:visited, 
+li {
+  list-style-type: none;
+  text-decoration: none;
+  letter-spacing: rem(1.2);
+  font-weight: 400;
+  font-family: $montserrat;
+}

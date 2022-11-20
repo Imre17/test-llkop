@@ -1,0 +1,266 @@
+@use '../abstracts' as *;
+
+.nav-bar {
+  height: rem(45);
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+
+  background-color: $darkblue;
+  position: relative;
+
+  //Tab view
+  @include breakpoint-up(md) {
+    height: rem(50);
+  }
+
+  // Large desktop view
+  @include breakpoint-up(xxl) {
+    height: rem(60);
+  }
+
+  &__logo-background {
+    position: absolute;
+    background-color: $yellow;
+    width: rem(225);
+    top: 0;
+    bottom: 0;
+    left: 0;
+
+    //Small phone view 
+    @include breakpoint-down(xs) {
+      width: rem(180);
+    }
+
+    // Phone view 
+    @include breakpoint-up(sm) {
+      width: rem(265);
+    }
+
+    //Tab view
+    @include breakpoint-up(md) {
+      width: rem(320);
+    }
+
+    // Small desktop view
+    @include breakpoint-up(xl) {
+      width: rem(380);
+    }
+
+    // Large desktop view
+    @include breakpoint-up(xxl) {
+      width: rem(400);
+    }
+  }
+  
+  &__logo{
+    display: flex;
+    align-items: center;
+    z-index: 2;
+
+    img {
+      height: rem(46);
+      width: rem(46);
+
+      //Tab view
+      @include breakpoint-up(md) {
+        height: rem(50);
+        width:  rem(50);
+      }
+
+      // Large desktop view
+      @include breakpoint-up(xxl) {
+        height: rem(60);
+        width: rem(70);
+      }
+    }
+
+    h2 {
+      margin-left: rem(15);
+      text-transform: uppercase;
+      color: $darkblue;
+      font-weight: 700;
+      font-family: $montserrat;
+      letter-spacing: rem(2);
+
+      //Small phone view 
+      @include breakpoint-down(xs) {
+        font-size: rem(16);
+      }
+
+      //Phone view 
+      @include breakpoint-up(sm) {
+        font-size: rem(28);
+      }
+
+      //Tab view
+      @include breakpoint-up(md) {
+        margin-left: rem(28);
+        font-size: rem(35);
+      }
+
+      // Large desktop view
+      @include breakpoint-up(xxl) {
+        font-size: rem(40);
+        margin-left: rem(30);
+      }
+  }
+
+  }
+
+// Mobile view hamburger button
+  &__hamburger-button {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    align-items: flex-end;
+    height: rem(28);
+    border: none;
+    background-color: transparent;
+    cursor: pointer;
+    z-index: 4;
+
+    //Small phone view 
+    @include breakpoint-down(xs) {
+      height: rem(25);
+    }
+
+    //Landscape Tab view
+    @include breakpoint-up(lg) {
+      display: none;
+    }
+    
+    span {
+      height: rem(4);
+      width: rem(30);
+      background-color: $yellow;
+      transition: all 0.3s ease-in-out;
+
+      //Small phone view 
+      @include breakpoint-down(xs) {
+        width: rem(25);
+      }
+    }
+
+    span:nth-child(2) {
+      width: rem(22);
+      
+      //Small phone view
+      @include breakpoint-down(xs) {
+        width: rem(18);
+      }
+    }
+  }
+
+  &__toggle {
+    span:nth-child(1) {
+      transform: translateY(rem(11)) rotate(45deg);
+
+      //Small phone view
+      @include breakpoint-down(xs) {
+        transform: translateY(rem(9)) rotate(45deg);
+      }
+    }
+    
+    span:nth-child(2) {
+      opacity: 0;
+      transform: translateX(rem(11));
+    }
+    
+    span:nth-child(3) {
+      transform: translateY(rem(-13)) rotate(135deg);
+      
+      //Small phone view
+      @include breakpoint-down(xs) {
+        transform: translateY(rem(-12)) rotate(135deg);
+      }
+    }
+  }
+
+  &__lists {
+      position: absolute;
+      text-align: center;
+      top: rem(-380);
+      left: 50%;
+      transform: translateX(-50%);
+      z-index: 3;
+      transition: all 0.3s ease-in-out 300ms;
+
+      //Landscape Tab view
+      @include breakpoint-up(lg) {
+        width: 75%;
+        position: static;
+        display: flex;
+        align-items: center;
+        justify-content: flex-end;
+        transform: translateX(0);
+      }
+
+      // Small desktop view
+      @include breakpoint-up(xl) {
+        width: 100%;
+      }
+
+      li {
+        &:not(:last-child) {
+          margin-bottom: rem(50);
+          
+          //Landscape Tab view
+          @include breakpoint-up(lg) {
+            margin-bottom: 0;
+          }
+        }
+      }
+
+      a {
+        color: $yellow;
+        font-size: rem(25);
+        transition: all 0.2s ;
+
+        //small phone view
+        @include breakpoint-down(xs) {
+          font-size: rem(20);
+        }
+
+        //Landscape Tab view
+        @include breakpoint-up(lg) {
+          padding: rem(13) rem(13);
+          font-size: rem(20);
+        }
+
+        // Small desktop view
+        @include breakpoint-up(xl) {
+          padding: rem(13) rem(18);
+        }
+
+        // Large desktop view
+        @include breakpoint-up(xxl) {
+          padding: rem(18) rem(25);
+        }
+
+        &:hover {
+          color: $red;
+
+          //Landscape Tab view
+          @include breakpoint-up(lg) {
+            color: $darkblue;
+            background-color: $red;
+          }
+        }
+      }
+  }
+
+// Mobile view layout
+  .overlay {
+    position: absolute;
+    height: 100vh;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    clip-path: circle(70.7% at 150% -60%);
+    background-color: $darkblue; 
+    overflow: hidden;
+    z-index: 3;
+  }
+}

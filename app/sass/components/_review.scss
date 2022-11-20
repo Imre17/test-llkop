@@ -1,0 +1,16 @@
+@use '../abstracts' as *;
+
+.review {
+  .eapps-widget-toolbar {
+    display: none;
+  }
+  a {
+    z-index: 99 !important;
+  }
+
+  @include breakpoint-down(xs) {
+    .duLaQz {
+      font-size: 16px;
+    }
+  }
+}

@@ -1,0 +1,152 @@
+@use '../abstracts' as *;
+
+.services {
+  margin-top: rem(100);
+
+  &__box {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    grid-auto-rows: 1fr;
+    row-gap: rem(30);
+    column-gap: rem(30);
+    margin-bottom: 20px;
+
+    //Small phone view
+    @include breakpoint-down(xs) {
+      grid-template-columns: 1fr;
+    }
+
+    //Tab view
+    @include breakpoint-up(md) {
+      row-gap: rem(40);
+      column-gap: rem(40);
+    }
+
+    // Small desktop view
+    @include breakpoint-up(xl) {
+      grid-template-columns: repeat(4, 1fr);
+      margin-bottom: 0;
+      column-gap: rem(20);
+    }
+
+    // Large desktop view
+    @include breakpoint-up(xxl) {
+      column-gap: rem(50);
+      padding: 0 rem(50);
+    }
+
+    h2 {
+      //Phone view 
+      @include breakpoint-up(sm) {
+        width: rem(193);
+      }
+
+      //Tab view
+      @include breakpoint-up(md) {
+        width: rem(223);
+      }
+    }
+  }
+  
+  .card-btn {
+    position: relative;
+    left: 50%;
+    transform: translateX(-50%);
+    margin-bottom: rem(20);
+    color: $yellow;
+    border: rem(1) solid $yellow;
+
+    &:hover {
+      background-color: $darkblue;
+      span {
+        color: $red;
+        padding-right: rem(25);
+  
+        &::after {
+          opacity: 1;
+          right: 0;
+        }
+      }
+    }
+  }
+
+  .modal {
+    display: none;
+    flex-direction: column;
+    position: fixed;
+    width: 100%;
+    height: 100%;
+    left: 0;
+    top: 0;
+    padding: rem(0) rem(50);
+    overflow: auto;
+    background-color: rgba(0,0,0,0.9);
+    z-index: 999;
+    pointer-events: none;
+
+    &:target {
+      display: flex;
+      pointer-events: auto;
+    }
+    
+    .gallery {
+      margin-top: rem(100);
+      display: grid;
+      grid-gap: rem(15);
+      grid-template-columns: repeat(auto-fit, minmax(rem(200), 1fr));
+      grid-auto-rows: rem(250);
+      grid-auto-flow: dense;
+    
+      // Small phone view 
+      @include breakpoint-down(xs) {
+        grid-template-columns: 1fr;
+        grid-auto-rows: rem(150);
+        gap: rem(10);
+      }
+  
+      @include breakpoint-up(xxl) {
+        grid-gap: rem(25);
+      }
+    }
+    
+    .gallery__item {
+      align-items: center;
+      display: block;
+      justify-content: center;
+      box-shadow: 4px 5px 5px rgba(0, 0, 0, 0.6);
+      border-radius: rem(5);
+      cursor: pointer;
+      transition: all 0.3s ease-in-out;
+    
+      &:hover {
+        transform: scale(1.03);      
+      }
+    }
+    
+    .gallery__item > img {
+      height: 100%;
+      object-fit: cover;
+      width: 100%;
+      border-radius: rem(5);
+    }
+
+    .cls-btn {
+      position: absolute;
+      top: rem(15);
+      right: rem(35);
+      color: #f1f1f1;
+      background-color: transparent;
+      border: none;
+      font-size: rem(40);
+      font-weight: bold;
+      transition: 0.3s;
+
+      &:hover,
+      &:focus {  
+        color: #bbb;
+        text-decoration: none;
+        cursor: pointer;
+      }
+    }
+  }
+}

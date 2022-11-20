@@ -1,0 +1,64 @@
+@use '../abstracts' as *;
+
+.card {
+  border-radius: rem(5);
+  cursor: pointer;
+  transition: all 0.3s ease-in-out;
+  background-color: $darkblue;
+
+  &:hover {
+    transform: scale(1.02);
+    box-shadow:rem(3) rem(8) rem(14) rem(3) rgba(0, 0, 0, 0.6);
+  }
+  
+  .card-image {
+    min-height: rem(182);
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-position: center center;
+    border-top-left-radius: rem(5);
+    border-top-right-radius: rem(5);
+  }
+
+  .card-description {
+    padding: rem(20) rem(20) rem(50) rem(20);
+    border-bottom-left-radius: rem(10);
+    border-bottom-right-radius: rem(10);
+
+    h3 {
+      font-size: rem(14);
+      color: $yellow;
+      margin-bottom: rem(10);
+
+      //Tab view
+      @include breakpoint-up(md) {
+        font-size: rem(17);
+        margin-bottom: rem(20);
+      }
+      
+      //Landscape Tab view
+      @include breakpoint-up(lg) {
+        width: 100%;
+        text-align: center;
+      }
+    }
+
+    p {
+      text-align: left;
+      color: hsl(0, 0%, 100%);
+      font-size: rem(11);
+      letter-spacing: rem(0.8);
+      line-height: rem(16);
+
+      //Tab view
+      @include breakpoint-up(md) {
+        font-size: rem(13);
+      }
+
+      //Landscape Tab view
+      @include breakpoint-up(lg) {
+        text-align: center;
+      }
+    }
+  }
+}

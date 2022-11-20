@@ -1,0 +1,243 @@
+@use '../abstracts' as *; 
+
+.hero {
+  position: relative;
+
+  &__carousel {
+    height: calc(100vh - rem(150));
+    width: 100vw;
+    overflow: hidden;
+    scroll-behavior: smooth;
+    display: flex;
+
+    @include breakpoint-up(lg) {
+      height: 100vh;
+    }
+
+
+    .carousel-image {
+      flex-shrink: 0;
+      height: 100%;
+      width: inherit;
+      background-repeat: no-repeat;
+      background-size: cover;
+      background-position: center center;
+      display: flex;
+      // align-items: center;
+      justify-content: center;
+
+
+      .title-1 {
+        margin: rem(150) auto;
+        span {
+          display: block;
+          color: $yellow;
+          font-size: rem(55);
+          font-weight: bolder;
+          text-shadow: rem(3) rem(2) rem(5) rgba(255,255,255, 0.6);
+
+          //Small phone view 
+          @include breakpoint-down(xs) {
+            font-size: rem(40);
+            text-align: center;
+          }
+
+          @include breakpoint-up(md) {
+            font-size: rem(90);
+          }
+
+          @include breakpoint-up(xl) {
+            font-size: rem(100);
+          }
+
+          @include breakpoint-up(xxl) {
+            font-size: rem(150);
+          }
+        }
+        font-size: rem(25);
+        color: #fff;
+        letter-spacing: rem(2);
+        text-transform: uppercase;
+        text-shadow: rem(10) rem(10) rem(15) rgba(0, 0, 0, 0.8);
+
+        //Small phone view 
+        @include breakpoint-down(xs) {
+          font-size: rem(18);
+          text-align: center;
+        }
+
+        @include breakpoint-up(md) {
+          font-size: rem(50);
+        }
+
+        @include breakpoint-up(xl) {
+          font-size: rem(60);
+          letter-spacing: rem(10);
+          line-height: rem(110);
+        }
+
+        @include breakpoint-up(xxl) {
+          font-size: rem(80);
+          letter-spacing: rem(15);
+          line-height: rem(150);
+        }
+      }
+
+      .title-2 {
+        margin: rem(150) auto;
+        font-size: rem(25);
+        font-weight: bolder;
+        color: #fff;
+        letter-spacing: rem(2);
+        line-height: rem(30);
+        text-transform: uppercase;
+        text-align: center;
+        text-shadow: rem(10) rem(10) rem(15) rgba(0, 0, 0, 0.8);
+
+
+        //Small phone view 
+        @include breakpoint-down(xs) {
+          font-size: rem(18);
+          
+        }
+
+        @include breakpoint-up(md) {
+          font-size: rem(50);
+          line-height: rem(66);
+        }
+
+
+        @include breakpoint-up(xl) {
+          font-size: rem(80);
+          line-height: rem(100);
+        }
+
+        @include breakpoint-up(xxl) {
+          font-size: rem(100);
+          line-height: rem(130);
+          
+        }
+      }
+    }
+  }
+
+  .social {
+    position: absolute;
+    bottom: rem(110);
+    left: 50%;
+    transform: translateX(-50%);
+
+    //Small phone view
+    @include breakpoint-down(xs) {
+      bottom: rem(90)
+    }
+
+    @include breakpoint-up(md) {
+      bottom: rem(170);
+    }
+
+
+    @include breakpoint-up(xxl) {
+      bottom: rem(200);
+    }
+
+    a {
+      display: inline-block;
+      font-size: 17px;
+      color: #fff;
+      transition: all 0.2s ease-in-out;
+
+      @include breakpoint-up(md) {
+        font-size: rem(25);
+      }
+      
+      @include breakpoint-up(xxl) {
+        font-size: rem(35);
+      }
+
+      &:hover {
+        color: $yellow;
+        transform: scale(1.5);
+      }
+    }
+    .tik-tok {
+      margin: 0 rem(10);
+
+      @include breakpoint-up(md) {
+        margin: 0 rem(15);
+      }
+
+      @include breakpoint-up(xxl) {
+        margin: 0 rem(25);
+      }
+    }
+  }
+
+  .down-arrow {
+    position: absolute;
+    bottom: rem(30);
+    left: 50%;
+    transform: translateX(-50%);
+    transition: all 0.3s ease-in-out;
+
+    //Small phone view
+    @include breakpoint-down(xs) {
+      bottom: rem(25)
+    }
+
+    @include breakpoint-up(md) {
+      bottom: rem(80);
+    }
+
+    @include breakpoint-up(xxl) {
+      bottom: rem(100);
+    }
+
+    &:hover {
+      bottom: rem(20);
+
+      @include breakpoint-up(xl) {
+        bottom: rem(75);
+      }
+
+      @include breakpoint-up(xxl) {
+        bottom: rem(85);
+      }
+    }
+
+    i {
+      font-size: rem(50);
+      color: #ffff;
+
+      &:hover {
+        color: $yellow;
+      }
+    }
+  }
+ 
+  &__pagination {
+    position: absolute;
+    height: rem(75);
+    left: 50%;
+    bottom: rem(-90);
+    transform: translateX(-50%);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+
+    .ball {
+      height: rem(12);
+      width: rem(12);
+      background-color: $yellow;
+      border-radius: rem(20);
+      margin: rem(2);
+      cursor: pointer;
+      transition: width 0.2s;
+      
+        &:first-child {
+          width: rem(25);
+        }
+    }
+  }
+
+}

@@ -1,0 +1,125 @@
+@use '../abstracts' as *;
+
+.about {
+  background-color: $darkblue;
+  margin-top: rem(200);
+  display: flex;  
+  align-items: center;
+  justify-content: space-between;
+  position: relative;
+
+  //Tab view
+  @include breakpoint-up(md) {
+    height: rem(300);
+    margin-top: rem(100);
+  }
+
+   // Large desktop view
+   @include breakpoint-up(lg) {
+    height: rem(400);
+  }
+ 
+  // Large desktop view
+   @include breakpoint-up(xl) {
+    height: rem(500);
+  }
+  
+  &__description {
+    padding-top: rem(180);
+    padding-bottom: rem(20);
+
+    //Tab view
+    @include breakpoint-up(md) {
+      width: rem(400);
+      padding-right: 0;
+      padding-top: 0;
+    }
+
+    //Landscape Tab view
+    @include breakpoint-up(xl) {
+      width: rem(690);
+      text-align: center;
+    }
+
+    h1 {
+      color: $yellow;
+    }
+    
+  }
+
+  p {
+    text-align: left;
+    color: hsl(0, 0%, 100%);
+    font-size: rem(11);
+    letter-spacing: rem(0.8);
+    line-height: rem(16);
+
+    //Tab view
+    @include breakpoint-up(md) {
+      width: rem(350);
+      font-size: rem(13);
+    }
+
+    //Landscape Tab view
+    @include breakpoint-up(lg) {
+      width: 100%;
+      text-align: center;
+    }
+
+    // Large desktop view
+    @include breakpoint-up(xl) {
+      width: rem(510);
+      font-size: rem(15);
+      line-height: rem(20);
+      margin: 0 auto;
+    }
+  }
+
+  &__image {
+    background-position: center center;
+    background-size: cover;
+    background-repeat: no-repeat;
+    position: absolute;
+    height: rem(350);
+    width: rem(350);
+    left: 50%;
+    top: rem(-170);
+    transform: translateX(-50%) rotateY(180deg);
+    
+
+     //small phone view
+    @include breakpoint-down(xs) {
+      height: rem(300);
+      width: rem(300);
+      top: rem(-130);
+      transform: translateX(-55%) rotateY(180deg);
+    }
+     //tab view
+    @include breakpoint-up(md) {
+      top: rem(-23);
+      height: rem(350);
+      width: rem(350);
+      transform: translateX(0) rotateY(180deg);
+      
+    }
+
+    // //Landscape Tab view
+    @include breakpoint-up(lg) {
+      height: rem(500);
+      width: rem(500);
+    }
+    
+    //Landscape Tab view
+    @include breakpoint-up(xl) {
+      height: rem(600);
+      width: rem(600);
+    }
+    
+    //Landscape Tab view
+    @include breakpoint-up(xxl) {
+      height: rem(700);
+      width: rem(700);
+    }
+  }
+
+}

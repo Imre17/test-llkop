@@ -1,0 +1,359 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <link rel="icon" type="image/png" sizes="96x96" href="./assets/favicon-96x96.png">
+  <!-- ICON NEEDS FONT AWESOME FOR CHEVRON UP ICON -->
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.2.0/css/all.min.css" integrity="sha512-xh6O/CkQoPOWDdYTDqeRdPCVd1SpvCA9XXcUnZS2FmJNp1coAFzvtCN9BmamE+4aHK8yyUHUSCcJHgXloTyT2A==" crossorigin="anonymous" referrerpolicy="no-referrer" />
+  <!-- Font family -->
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;700&display=swap" rel="stylesheet">
+  <!-- Style -->
+  <link rel="stylesheet" href="./dist/style.css">
+  <title>LLKOP</title>
+  <!-- Review -->
+  <script src="https://apps.elfsight.com/p/platform.js" defer></script>
+</head>
+<body>
+
+  <!-- Return to Top -->
+  <button id="return-to-top"><i class="fa-sharp fa-solid fa-angle-up"></i></button>
+
+  <!-- Navigation bar -->
+  <nav id="acasa" class="nav-bar container">
+    <div class="nav-bar__logo-background"></div>
+      <a class="nav-bar__logo" href="#acasa">
+        <img src="./assets/logo_llkop.jpg" alt="excavator" height="35px" width="35px">
+        <h2>Llkop</h2>
+      </a>
+    
+    <!-- Hamburger button =>  >= 576px -->
+    <button class="nav-bar__hamburger-button">
+      <span></span>
+      <span></span>
+      <span></span>
+    </button>
+    <!-- Mobile view layout -->
+    <div class="overlay"></div>
+
+    <!-- Navigation lists =>  < 576px-->
+    <ul class="nav-bar__lists">
+      <li>
+        <a href="#acasa">Acasa</a>
+      </li>
+      <li>
+        <a href="#servicii">Servicii</a>
+      </li>
+      <li>
+        <a href="#despre-noi">Despre noi</a>
+      </li>
+      <li>
+        <a href="#proiecte">Proiecte</a>
+      </li>
+      <li>
+        <a href="#contacte">Contacte</a>
+      </li>
+    </ul>
+  </nav>
+  <!-- Navigation bar end -->
+
+  <!-- Hero section -->
+  <section class="hero">
+    <div class="social">
+      <a class="facebook" href="https://www.facebook.com/laszlo.florin" target="_blank">
+        <i class="fa-brands fa-facebook"></i>
+      </a>
+      <a class="tik-tok" href="#">
+        <i class="fa-brands fa-tiktok"></i>
+      </a>
+      <a class="instagram" href="https://www.instagram.com/laszloflorin212/" target="_blank">
+        <i class="fa-brands fa-instagram"></i>
+      </a>  
+    </div>
+    <a href="#servicii" class="down-arrow"><i class="fa-sharp fa-solid fa-angle-down"></i></a>
+    <div class="hero__carousel">
+      <div class="carousel-image" style="background-image: linear-gradient(0deg, rgba(0,0,0,0.3477766106442577) 0%, rgba(0,0,0,0.5942752100840336) 67%), url('./assets/carousel-img-1.jpg');">
+        <h2 class="title-1"><span>LLKOP</span>SERVICE MANAGEMENT</h2>
+      </div>
+      <div class="carousel-image" style="background-image: linear-gradient(0deg, rgba(0,0,0,0.3477766106442577) 0%, rgba(0,0,0,0.5942752100840336) 67%), url('./assets/carousel-img-2.jpeg');">
+        <h2 class="title-2">Activități in domeniul construcțiilor</h2>
+      </div>
+
+    <div class="hero__pagination">
+      <div class="ball"></div>
+      <div class="ball"></div>
+    </div>
+  </section>
+  <!-- Hero section end -->
+  
+  <!-- Services section -->
+  <section id="servicii" class="services container">
+    <h1>Servicii</h1>
+    <div class="services__box">
+      <a href="#modal-1" class="card">
+        <div class="card-image" style="background-image: url('./assets/aductiuni-apa.jpg');"></div>
+        <div class="card-description">
+          <h3>Executam aductiuni de apă și canalizare</h3>
+          <p>
+            Suntem o firma responsabila, profesionisti in executia de instalatii de canalizare exterioara si interioara, instalatii de alimentare cu apa, bransamente de apa si canal
+          </p>
+        </div>
+      </a>
+      <!-- Modal 1 -->
+      <div id="modal-1" class="modal">
+        <a href="#close" class="cls-btn"><span>&times;</span></a>
+        <div class="gallery">
+          <div class="gallery__item">
+            <img src="./assets/gallery/img-59.jpg" class="gallery-img" alt="">
+          </div>
+          <div class="gallery__item">
+            <img src="./assets/gallery/img-57.jpg" class="gallery-img" alt="">
+          </div>
+          <div class="gallery__item">
+            <img src="./assets/gallery/img-54.jpg" class="gallery-img" alt="">
+          </div>
+          <div class="gallery__item">
+            <img src="./assets/gallery/img-52.jpg" class="gallery-img" alt="">
+          </div>
+          <div class="gallery__item">
+            <img src="./assets/gallery/img-30.jpg" class="gallery-img" alt="">
+          </div>
+          <div class="gallery__item">
+            <img src="./assets/gallery/img-27.jpg" class="gallery-img" alt="">
+          </div>
+          <div class="gallery__item">
+            <img src="./assets/gallery/img-37.jpg" class="gallery-img" alt="">
+          </div>
+        </div>
+      </div>
+      <a href="#modal-2" class="card">
+        <div class="card-image" style="background-image: url('./assets/nivelare-evacuare.jpg');"></div>
+        <div class="card-description">
+          <h3>Nivelare si evacuare pamant</h3>
+          <p>
+            Manopera de pregatire a terenului pentru gazonare consta in saparea mecanizata (frezarea) a terenului, maruntirea solului si nivelarea terenului urmarind curbele de nivel existente.... Sapare (frezare), maruntire si nivelare!
+          </p>
+        </div>
+      </a>
+      <!-- Modal 2 -->
+      <div id="modal-2" class="modal">
+        <a href="#close" class="cls-btn"><span>&times;</span></a>
+        <div class="gallery">
+          <div class="gallery__item">
+            <img src="./assets/gallery/img-18.jpg" class="gallery-img" alt="">
+          </div>
+          <div class="gallery__item">
+            <img src="./assets/gallery/img-21.jpg" class="gallery-img" alt="">
+          </div>
+          <div class="gallery__item">
+            <img src="./assets/gallery/img-39.jpg" class="gallery-img" alt="">
+          </div>
+          <div class="gallery__item">
+            <img src="./assets/gallery/img-41.jpg" class="gallery-img" alt="">
+          </div>
+          <div class="gallery__item">
+            <img src="./assets/gallery/img-49.jpg" class="gallery-img" alt="">
+          </div>
+          <div class="gallery__item">
+            <img src="./assets/gallery/img-55.jpg" class="gallery-img" alt="">
+          </div>
+        </div>
+      </div>
+      <a href="#modal-3" class="card">
+        <div class="card-image" style="background-image: url('./assets/transport-marfa.jpg');"></div>
+        <div class="card-description">
+          <h3>Transport marfa cu macara </h3>
+          <p>
+            Lorem ipsum dolor sit amet consectetur adipisicing elit. Quibusdam fugit impedit totam eum necessitatibus veniam saepe vel nihil 
+          </p>
+        </div>
+      </a>
+
+      <!-- Modal 3 -->
+      <div id="modal-3" class="modal">
+        <a href="#close" class="cls-btn"><span>&times;</span></a>
+        <div class="gallery">
+          <div class="gallery__item">
+            <img src="./assets/gallery/img-66.jpg" class="gallery-img" alt="">
+          </div>
+          <div class="gallery__item">
+            <img src="./assets/gallery/img-61.jpg" class="gallery-img" alt="">
+          </div>
+          <div class="gallery__item">
+            <img src="./assets/gallery/img-53.jpg" class="gallery-img" alt="">
+          </div>
+          <div class="gallery__item">
+            <img src="./assets/gallery/img-48.jpg" class="gallery-img" alt="">
+          </div>
+          <div class="gallery__item">
+            <img src="./assets/gallery/img-40.jpg" class="gallery-img" alt="">
+          </div>
+          <div class="gallery__item">
+            <img src="./assets/projects/gal-1.jpg" class="gallery-img" alt="">
+          </div>
+        </div>
+      </div>
+      <a href="#modal-4" class="card">
+        <div class="card-image" style="background-image: url('./assets/bransament-apa.jpg');"></div>
+        <div class="card-description">
+          <h3>Branșamente apă curentă</h3>
+          <p>
+            Lorem ipsum dolor sit amet consectetur adipisicing elit. Quibusdam fugit impedit totam eum necessitatibus veniam saepe vel nihil 
+          </p>
+        </div>
+      </a>
+
+      <!-- Modal 4 -->
+      <div id="modal-4" class="modal">
+        <a href="#close" class="cls-btn"><span>&times;</span></a>
+        <div class="gallery">
+          <div class="gallery__item">
+            <img src="./assets/gallery/img-12.jpg" class="gallery-img" alt="">
+          </div>
+          <div class="gallery__item">
+            <img src="./assets/gallery/img-15.jpg" class="gallery-img" alt="">
+          </div>
+          <div class="gallery__item">
+            <img src="./assets/gallery/img-24.jpg" class="gallery-img" alt="">
+          </div>
+          <div class="gallery__item">
+            <img src="./assets/gallery/img-26.jpg" class="gallery-img" alt="">
+          </div>
+          <div class="gallery__item">
+            <img src="./assets/gallery/img-30.jpg" class="gallery-img" alt="">
+          </div>
+          <div class="gallery__item">
+            <img src="./assets/gallery/img-27.jpg" class="gallery-img" alt="">
+          </div>
+          <div class="gallery__item">
+            <img src="./assets/gallery/img-37.jpg" class="gallery-img" alt="">
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+  <!-- Services section end -->
+
+  <!-- About section -->
+  <section id="despre-noi" class="about ">
+      <div class="about__description container">
+        <h1>Despre noi</h1>
+        <p>
+          Lorem ipsum dolor sit amet consectetur adipisicing elit. Officiis, vitae? Eligendi voluptatibus fuga culpa natus unde harum quod rerum est! Eum modi sed laboriosam vero ipsa doloribus cupiditate veritatis possimus. 
+          Lorem ipsum dolor sit amet consectetur adipisicing elit. Officiis, vitae? Eligendi voluptatibus fuga culpa natus unde harum quod rerum est! Eum modi sed laboriosam vero ipsa doloribus cupiditate veritatis possimus. 
+        </p>
+      </div>
+      <div class="about__image" style="background-image: url('./assets/about-img-min.png');"></div>
+  </section>
+  <!-- About Section end -->
+
+  <!-- Project Section -->
+  <section id="proiecte" class="projects container">
+    <h1>Proiecte</h1>
+    <div class="projects__gallery">
+      <figure class="gallery-item gallery-item-1">
+          <img src="./assets/projects/gal-1.jpg" alt="Gallery image 1" class="gallery-img">
+      </figure>
+      <figure class="gallery-item gallery-item-2">
+          <img src="./assets/projects/gal-2.jpg" alt="Gallery image 2" class="gallery-img">
+      </figure>
+      <figure class="gallery-item gallery-item-3">
+          <img src="./assets/projects/gal-3.jpg" alt="Gallery image 3" class="gallery-img">
+      </figure>
+      <figure class="gallery-item gallery-item-4">
+          <img src="./assets/projects/gal-4.jpg" alt="Gallery image 4" class="gallery-img">
+      </figure>
+      <figure class="gallery-item gallery-item-5">
+          <img src="./assets/projects/gal-5.jpg" alt="Gallery image 5" class="gallery-img">
+      </figure>
+      <figure class="gallery-item gallery-item-6">
+          <img src="./assets/projects/gal-6.jpg" alt="Gallery image 6" class="gallery-img">
+      </figure>
+  </div>
+    <div class="fullpage" onclick="this.style.display ='none'"></div>
+    <a href="./projects.html"  class="btn projects__project-btn" type="button"><span>Vezi Mai Multe</span></a>
+  </section>
+  <!-- Projects end -->
+
+  <section class="review container">
+    <div class="elfsight-app-68f81d83-21ef-4f71-b2ee-d28965c0382e"></div>
+  </section>
+
+  <!-- Contact -->
+  <section id="contacte" class="contact container">
+    <h1>Contacte</h1>
+
+    <div class="contact__box">
+      <iframe class="g-map" src="https://www.google.com/maps/embed?pb=!1m14!1m8!1m3!1d11096.043248761014!2d25.529548!3d45.95106700000001!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x0%3A0xa7b996b0e3194267!2sLLKOP%20SERVICE%20MANAGEMENT!5e0!3m2!1sen!2suk!4v1666446896947!5m2!1sen!2suk" allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade"></iframe>
+
+      <div class="contact-details">
+        <div class="social">
+          <a class="facebook" href="https://www.facebook.com/laszlo.florin" target="_blank">
+            <i class="fa-brands fa-facebook"></i>
+          </a>
+          <a class="tik-tok" href="https://www.tiktok.com/en/" target="_blank">
+            <i class="fa-brands fa-tiktok"></i>
+          </a>
+          <a class="instagram" href="https://www.instagram.com/laszloflorin212/" target="_blank">
+            <i class="fa-brands fa-instagram"></i>
+          </a>    
+          <a class="tel-nr" href="tel:0744118591">+49 1575 0864072</a>
+          <a class="email" href="mailto:example11@gmail.com?subject=subject text">example11@gmail.com</a>
+        </div>
+        <address class="address">
+          <h2>Adresă</h2>
+          <p>Str. Mare</p>
+          <p>Apața 507005</p>
+          <p>România</p>
+        </address>
+      </div>
+
+      <form class="form">
+        <span class="input">
+          <input type="text" class="input-field" id="firstName" required/>
+          <label for="firstName" class="input-label">
+            <span class="input-label-content">Nume</span>
+          </label>
+        </span>
+        
+        <span class="input">
+          <input type="text" class="input-field" id="lastName" required/>
+          <label for="lastName" class="input-label">
+            <span class="input-label-content">Prenume</span>
+          </label>
+        </span>
+        
+        <span class="input">
+          <input type="number" class="input-field" id="phone-nr" required/>
+          <label for="phone-nr" class="input-label">
+            <span class="input-label-content">Nr. Telefon</span>
+          </label>
+        </span>
+        
+        
+        <span class="input">
+          <input type="email" class="input-field" id="email" required/>
+          <label for="email" class="input-label">
+            <span class="input-label-content">Adresa Email</span>
+          </label>
+        </span>
+        
+        <span class="input message">
+          <textarea type="text" class="input-field" id="message" required></textarea>
+          <label for="message" class="input-label">
+            <span class="input-label-content">Mesaje</span>
+          </label>
+        </span>
+        
+        <button class="btn form__send-btn"><span>Trimite</span></button>
+      </form>
+    </div>
+  </section>
+  
+  <!-- Javascript source -->
+  <script src="./app/js/app.js"></script>
+</body>
+</html>

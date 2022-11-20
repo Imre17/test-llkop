@@ -1,0 +1,28 @@
+// ------ 1em === 16px----------
+
+// 592px, 768px, 992px, 1200px, 1400px
+$breakpoints-up: (
+  "sm": 37em,
+  "md": 48em,
+  "lg": 62em,
+  "xl": 75em,
+  "xxl": 87.5em
+);
+
+// 560px
+$breakpoints-down: (
+  'xs': 35em
+);
+
+
+@mixin breakpoint-up($size) {
+  @media(min-width: map-get($breakpoints-up, $size)) {
+    @content
+  }
+};
+
+@mixin breakpoint-down($size) {
+  @media(max-width: map-get($breakpoints-down, $size)) {
+    @content
+  }
+}
